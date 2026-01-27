@@ -89,7 +89,7 @@ public class colorSortingScript : MonoBehaviour
 		Settings = modConfig.Settings;
 		modConfig.Settings = Settings;
 		TryOverrideMission();
-		size = Settings.size < 1?3:Settings.size;
+		size = Settings.size < 1 || Settings.size>35?3:Settings.size;
 		
 		
 		buttons = Enumerable.Range(0, 6*size*size).Select(x => Instantiate(button, buttonParent)).ToArray();
